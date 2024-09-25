@@ -26,7 +26,7 @@ const Employess = () => {
         navigate("/dashboard/user");  // Redirect to user dashboard
         return;
       }
-      const response = await axios.get("http://localhost:8082/api/v8/user", {
+      const response = await axios.get("https://employee-management-app-wnce.onrender.com/api/v8/user", {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -45,7 +45,7 @@ const Employess = () => {
 
   const getAllSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:8082/api/v8/user/search?username=${search}`,{
+      const response = await axios.get(`https://employee-management-app-wnce.onrender.com/api/v8/user/search?username=${search}`,{
         headers: {
             Authorization: `Bearer ${authToken}`,
           },
