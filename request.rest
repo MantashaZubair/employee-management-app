@@ -1,0 +1,87 @@
+###
+GET http://localhost:8082/api/v8/user
+Authorization:Bearar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmUzZTMwOGE1NmYyODY5ZmQ4ZGU5MTciLCJpYXQiOjE3MjY1NTI0MjQsImV4cCI6MTcyNjU1NjAyNH0.wUmH0vZSlNxrA_SX-9zNAo9Ops19EcXGxrQkcThexZs
+###
+###
+GET http://localhost:8082/api/v8/user/user-auth
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmRmMjU0NDA3YmVjYTZiNTM4ZWExNDIiLCJpYXQiOjE3MjU5NzY3NDcsImV4cCI6MTcyNTk4MDM0N30.B9VR460v7SqUmja254we5-xKmlGj1_VvFZ_oqKI3a6w
+###
+###
+GET  res.status(200).send({ok:true})admin-auth
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmRkOWQzMDYyMzhlZjhiYjRkZGVhOGMiLCJpYXQiOjE3MjU5NzY0MDEsImV4cCI6MTcyNTk4MDAwMX0.z984cEjNBk2gx9NKHxKIWLPyGZNnguj8gNKV1NcYWPI
+###
+GET http://localhost:8082/api/v8/user/search?username=mantasha
+
+###
+GET http://localhost:8082/api/v8/user/66bef4f56eab7a3185e9132a
+###
+GET http://localhost:8082/api/v8/user
+
+###
+DELETE  http://localhost:8082/api/v8/user/66bef4f56eab7a3185e9132a
+
+###
+PUT  http://localhost:8082/api/v8/user/66e3e308a56f2869fd8de917
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmUzZTMwOGE1NmYyODY5ZmQ4ZGU5MTciLCJpYXQiOjE3MjY1NTI0MjQsImV4cCI6MTcyNjU1NjAyNH0.wUmH0vZSlNxrA_SX-9zNAo9Ops19EcXGxrQkcThexZs
+Content-Type: application/json
+
+{    
+    "phone":"7897744166",
+    "department":"66e88333034e57a5e63f035c"
+}
+
+
+###
+POST http://localhost:8082/api/v8/user
+Content-Type: application/json
+
+
+
+{"name":"Vinni","email":"kss@a.com","department":"Female","salary":"10","phone":"1234567891"}
+
+
+###
+POST http://localhost:8082/api/v8/auth/register
+Content-Type: application/json
+
+{
+"username":"mantasha",
+"email":"mantasha@gmail.com",
+"password":"mantasha@1234",
+"phone":"7897744166"
+
+
+}
+###
+POST http://localhost:8082/api/v8/auth/login
+Content-Type: application/json
+
+{
+"username":"aman",
+"password":"aman@1234"
+}
+###
+POST http://localhost:8082/api/v8/category/create-category
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmUzZTMwOGE1NmYyODY5ZmQ4ZGU5MTciLCJpYXQiOjE3MjY1MDc3OTIsImV4cCI6MTcyNjUxMTM5Mn0.6jVcwo0JyU-WxFvzB-qPzQuUyyg4kHmTAgSJ2Q2wQe8
+Content-Type: application/json
+
+{
+"department":"software tester"
+}
+
+###
+PUT http://localhost:8082/api/v8/category/update-category/66e7e8ad708e326afd6b2fcf
+Content-Type: application/json
+
+{
+"department":"software Engineer"
+}
+###
+get http://localhost:8082/api/v8/category/get-category
+Content-Type: application/json
+###
+get http://localhost:8082/api/v8/category/getsinglecategory/66e7e8ad708e326afd6b2fcf
+Content-Type: application/json
+###
+Delete http://localhost:8082/api/v8/category/delete-category/66e7eec5d771e22487b939d4
+Content-Type: application/json
