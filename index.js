@@ -9,18 +9,24 @@ const authRoutes= require("./routes/auth.routes")
 const categoryRoutes= require("./routes/category.routes")
 const app = express()
 connectDB()
+
 const corsOptions = {
-    origin: (origin, callback) => {
-        const allowedOrigins = ["http://localhost:5173", "https://employee-management-app-wnce.onrender.com"];
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    optionsSuccessStatus: 200,
+    origin: "http://localhost:5173",
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     credentials: true,
-};
+  };
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//         const allowedOrigins = ["http://localhost:5173", "https://employee-management-app-wnce.onrender.com"];
+//         if (!origin || allowedOrigins.includes(origin)) {
+//             callback(null, true);
+//         } else {
+//             callback(new Error('Not allowed by CORS'));
+//         }
+//     },
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+// };
 // const corsOptions = {
 //     origin: [
 //         "http://localhost:5173", // your local development server
