@@ -14,7 +14,7 @@ const EmployeeTable = ({handleUpdate, user,getAllData, currentPage,limit}) => {
        try {
         let answer = window.prompt("Are you sure want to delete this employee?")
         if(!answer) return ; 
-       await axios.delete(`http://localhost:8082/api/v8/user/${id}`)
+       await axios.delete(`https://employee-management-app-wnce.onrender.com/api/v8/user/${id}`)
       handleSuccess(`delete employee`)
       getAllData()
     } catch (error) {
@@ -27,7 +27,7 @@ const EmployeeTable = ({handleUpdate, user,getAllData, currentPage,limit}) => {
 
   const getDepartments =async()=>{
     try {
-      const response= await axios.get("http://localhost:8082/api/v8/category/get-category", {
+      const response= await axios.get("https://employee-management-app-wnce.onrender.com/api/v8/category/get-category", {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
