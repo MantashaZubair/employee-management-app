@@ -1,0 +1,135 @@
+.add-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.addpopup-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    animation: popupFadeIn 0.4s forwards;
+}
+.addEmployee{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+}
+
+@keyframes popupFadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.addpopup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.addpopup-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.cross-btn {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.cross-btn:hover {
+    color: #f44336;
+}
+
+.input-controls {
+    padding: 10px 0;
+}
+
+.input-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.input-form label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-form input, .department {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+
+.input-form input:focus, .department:focus {
+    border-color: #1758f0;
+    outline: none;
+}
+
+.save-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1758f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #0e45c9;
+}
+
+@media (max-width: 600px) {
+    .addpopup-container {
+        width: 95%;
+    }
+
+    .input-form label {
+        font-size: 14px;
+    }
+
+    .input-form input {
+        font-size: 14px;
+    }
+
+    .save-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

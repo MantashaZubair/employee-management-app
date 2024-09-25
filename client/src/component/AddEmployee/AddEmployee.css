@@ -1,0 +1,51 @@
+.add-popup{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    min-height: 100%;
+    background-color: #00000080;
+    display: grid;
+}
+.addpopup-container{
+place-self: center;
+width: max(21vw,500px);
+color: black;
+background-color: white;
+}
+.addpopup-title{
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    align-items: center;
+    color: black;
+}
+.cross-btn{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.input-controls{
+padding: 10px;
+}
+.input-form{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.input-form input , .department{
+    width: 75%;
+    padding: 3px 10px;
+    font-size: 16px;
+
+}
+.save-btn{
+    background-color: #1758f0;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+    border: 1px solid #1758f0;
+    color: white;
+    border-radius: 3px;
+}

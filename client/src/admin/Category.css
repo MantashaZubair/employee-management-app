@@ -1,0 +1,72 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:3px;
+   
+}
+.employee-box{
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+.employee-controls{
+ width: 80%;
+ padding: 10px;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 5px;
+padding: 10px;
+
+}
+
+.add-employee-btn{
+    background-color: #1758f0;
+    color: white;
+    border: 1px solid #1758f0;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+.add-employee-btn-active{
+  background-color: #1e3d87 ;
+  border:1px solid #1758f0;
+  color:white;
+  outline: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease-in;
+}
+.employee-table {
+    margin-top: 20px;
+  }
+  
+  .employee-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-table th, .employee-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .employee-table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  

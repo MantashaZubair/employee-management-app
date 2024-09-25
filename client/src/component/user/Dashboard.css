@@ -1,0 +1,114 @@
+.userContainer {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #043866;
+  color: #ffffff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #1565c0;
+}
+
+.sidebar ul li a:hover {
+  background-color: #1565c0;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f0f0f0;
+  color: #333;
+  overflow-y: auto;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content h1 {
+  font-size: 36px;
+  color: #1e88e5;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;  /* Slightly larger for readability */
+  line-height: 1.6;  /* Line spacing for easier reading */
+  color: #666;       /* Softer gray for paragraphs */
+  text-align: justify; /* Justify the text for cleaner alignment */
+  /* margin-bottom: 20px; Adds space between paragraphs */
+  max-width: 800px;   /* Restrict the width for better readability */
+}
+
+/* Hide Sidebar on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 70px;
+  }
+
+  .toggle-button {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #1e88e5;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+}
+
+/* Toggle Button for larger screens (can be hidden) */
+/* .toggle-button {
+  display: none;
+} */
+
+
+
+
+  

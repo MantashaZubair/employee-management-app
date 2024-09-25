@@ -1,0 +1,100 @@
+.body-container{
+    height: 100vh;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding:3px;
+   
+}
+.employee-box{
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+.employee-controls{
+ width: 80%;
+ padding: 10px;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 5px;
+padding: 10px;
+
+}
+.employee-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+.add-employee-btn{
+    background-color: #1758f0;
+    color: white;
+    border: 1px solid #1758f0;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+.add-employee-btn-active{
+  background-color: #1e3d87 ;
+  border:1px solid #1758f0;
+  color:white;
+  outline: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease-in;
+}
+.search-employee{
+    width: 40%;
+    color: rgb(87, 84, 84);
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 2px 4px;
+}
+.pagination-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-page{
+    padding: 3px;
+}
+.totalpage{
+    background-color: #1758f0;
+    color: white;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.pagenumber{
+    padding: 2px 5px;
+    margin-right: 2px;
+}
+.active{
+    background-color: #1758f0;
+    border: 2px solid #1758f0;
+    border-radius: 2px;
+    padding:2px 5px;
+    margin-right: 2px;
+}
+.previous{
+    padding: 2px;
+    margin-right: 2px;
+}
+.nextbutton{
+    padding: 2px;
+    margin-left: 2px;  
+}
