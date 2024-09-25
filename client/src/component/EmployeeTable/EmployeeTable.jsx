@@ -12,8 +12,6 @@ const EmployeeTable = ({handleUpdate, user,getAllData, currentPage,limit}) => {
   const authToken = localStorage.getItem('token');
   const handleDelete =async(id)=>{
        try {
-        let answer = window.prompt("Are you sure want to delete this employee?")
-        if(!answer) return ; 
        await axios.delete(`https://employee-management-app-wnce.onrender.com/api/v8/user/${id}`)
       handleSuccess(`delete employee`)
       getAllData()
