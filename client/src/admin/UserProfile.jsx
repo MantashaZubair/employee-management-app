@@ -23,7 +23,7 @@ const UserProfile = () => {
   // Fetch employee details
   const getuser = async () => {
     try {
-      const response = await axios.get(`http://localhost:8082/api/v8/user/${id}`);
+      const response = await axios.get(`https://employee-management-app-wnce.onrender.com/api/v8/user/${id}`);
       setEmployee(response.data);
 
       // Fetch department by ID if department exists in employee data
@@ -36,7 +36,7 @@ const UserProfile = () => {
   // Fetch department details by ID
   const getDepartmentById = async (departmentId) => {
     try {
-      const response = await axios.get(`http://localhost:8082/api/v8/category/getsinglecategory/${departmentId}`);
+      const response = await axios.get(`https://employee-management-app-wnce.onrender.com/api/v8/category/getsinglecategory/${departmentId}`);
       console.log(response.data.getsingle.department)
       setDepartmentName(response.data.getsingle.department); // Assuming response contains department name
     } catch (error) {
