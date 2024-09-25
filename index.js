@@ -9,26 +9,26 @@ const authRoutes= require("./routes/auth.routes")
 const categoryRoutes= require("./routes/category.routes")
 const app = express()
 connectDB()
-// const corsOptions = {
-//     origin: (origin, callback) => {
-//         const allowedOrigins = ["http://localhost:5173", "https://employee-management-app-wnce.onrender.com"];
-//         if (!origin || allowedOrigins.includes(origin)) {
-//             callback(null, true);
-//         } else {
-//             callback(new Error('Not allowed by CORS'));
-//         }
-//     },
-//     optionsSuccessStatus: 200,
-//     credentials: true,
-// };
 const corsOptions = {
-    origin: [
-        "http://localhost:5173", // your local development server
-        "https://employee-management-app-wnce.onrender.com" // your deployed frontend
-    ],
+    origin: (origin, callback) => {
+        const allowedOrigins = ["http://localhost:5173", "https://employee-management-app-wnce.onrender.com"];
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     optionsSuccessStatus: 200,
     credentials: true,
 };
+// const corsOptions = {
+//     origin: [
+//         "http://localhost:5173", // your local development server
+//         "https://employee-management-app-wnce.onrender.com" // your deployed frontend
+//     ],
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+// };
 app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.static(path.join(__dirname, "./client/dist")))
