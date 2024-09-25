@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Signup from './pages/signup'
+import Signup from './pages/Signup'
 import Login from './pages/Login'
 import UserDashboard from './component/user/UserDashboard'
 import RedirectIfAuthenticated from './Routes/RediectIfAuthenticated'
