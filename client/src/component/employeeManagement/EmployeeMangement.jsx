@@ -23,7 +23,7 @@ const EmployeeMangement = () => {
 
   const getAllData = async () => {
     try {
-      const response = await axios.get("http://localhost:8082/api/v8/user");
+      const response = await axios.get("https://employee-management-app-wnce.onrender.com/api/v8/user");
       setUser(response.data);
     } catch (error) {
       console.log(error);
@@ -36,7 +36,7 @@ const EmployeeMangement = () => {
 
   const getAllSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:8082/api/v8/user/search/?name=${search}&department=${search}`);
+      const response = await axios.get(`https://employee-management-app-wnce.onrender.com/api/v8/user/search/?name=${search}&department=${search}`);
       setUser(response.data);
     } catch (error) {
       console.log(error);
