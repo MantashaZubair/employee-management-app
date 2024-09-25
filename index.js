@@ -10,7 +10,7 @@ const categoryRoutes= require("./routes/category.routes")
 const app = express()
 connectDB()
 const corsOptions = {
-    origin: "https://employee-management-app-wnce.onrender.com",
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     credentials: true,
   };
