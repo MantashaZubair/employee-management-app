@@ -12,7 +12,7 @@ connectDB()
 const corsOptions = {
     origin: (origin, callback) => {
         const allowedOrigins = ["http://localhost:5173", "https://employee-management-app-wnce.onrender.com"];
-        if (!origin || allowedOrigins.includes(origin)) {
+        if (!origin || allowedOrigins.includes(origin)!== -1) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
