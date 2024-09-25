@@ -57,8 +57,8 @@ const AddCategory = ({setAddCategory, categoryObj, setCategoryObj, getAllCategor
               },
             body: JSON.stringify(category),     
           }
-        const response= updateMode?await fetch(`http://localhost:8082/api/v8/category/update-category/${category._id}`,putOption)
-        :await fetch("http://localhost:8082/api/v8/category/create-category",postOption) 
+        const response= updateMode?await fetch(`https://employee-management-app-wnce.onrender.com/api/v8/category/update-category/${category._id}`,putOption)
+        :await fetch("https://employee-management-app-wnce.onrender.com/api/v8/category/create-category",postOption) 
           // console.log(response)
           const data= await response.json()
           console.log(data)
