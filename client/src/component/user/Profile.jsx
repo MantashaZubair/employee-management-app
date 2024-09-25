@@ -28,7 +28,7 @@ const Profile = () => {
     // Fetch department details by ID
     const getDepartmentById = async (departmentId) => {
       try {
-        const response = await axios.get(`http://localhost:8082/api/v8/category/getsinglecategory/${departmentId}`);
+        const response = await axios.get(`https://employee-management-app-wnce.onrender.com/api/v8/category/getsinglecategory/${departmentId}`);
         console.log(response.data.getsingle.department)
         setDepartmentName(response.data.getsingle.department); // Assuming response contains department name
       } catch (error) {
