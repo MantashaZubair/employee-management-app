@@ -17,7 +17,7 @@ const Category = () => {
     };
     const getAllCategory =async()=>{
     try {
-      const response= await axios.get("http://localhost:8082/api/v8/category/get-category", {
+      const response= await axios.get("https://employee-management-app-wnce.onrender.com/api/v8/category/get-category", {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -42,7 +42,7 @@ const Category = () => {
     const handleDelete =async(id)=>{
         console.log(id)
         try {    
-        await axios.delete(`http://localhost:8082/api/v8/category/delete-category/${id}`)
+        await axios.delete(`https://employee-management-app-wnce.onrender.com/api/v8/category/delete-category/${id}`)
        handleSuccess(`delete employee`)
       getAllCategory()
      } catch (error) {
