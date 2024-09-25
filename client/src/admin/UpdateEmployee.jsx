@@ -45,7 +45,7 @@ const UpdateEmployee = ({
   const getAllCategory = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8082/api/v8/category/get-category",
+        "https://employee-management-app-wnce.onrender.com/api/v8/category/get-category",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
