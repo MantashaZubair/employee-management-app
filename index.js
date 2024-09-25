@@ -11,10 +11,17 @@ const app = express()
 connectDB()
 
 const corsOptions = {
-    origin: "process.env.FRONTEND_URL||http://localhost:5173",
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    origin: (origin, callback) => {
+        const allowedOrigins = ["http://localhost:5173", "https://employee-management-app-wnce.onrender.com"];
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    optionsSuccessStatus: 200,
     credentials: true,
-  };
+};
 
 app.use(cors(corsOptions))
 app.use(express.json())
