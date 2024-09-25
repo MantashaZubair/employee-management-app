@@ -10,7 +10,7 @@ const ProtectedRoutes = () => {
   useEffect(() => {
     const authCheck = async () => {
       try {
-        const res = await axios.get(`http://localhost:8082/api/v8/user/user-auth`, {
+        const res = await axios.get(`https://employee-management-app-wnce.onrender.com/api/v8/user/user-auth`, {
           headers: {
             Authorization: `Bearer ${auth}`
           }
