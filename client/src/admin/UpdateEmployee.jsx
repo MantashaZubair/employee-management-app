@@ -84,7 +84,7 @@ const UpdateEmployee = ({
         formData.append("profileImage", employee.profileImage);
       }
       const updateUser = await axios.put(
-        `http://localhost:8082/api/v8/user/${employee._id}`,
+        `https://employee-management-app-wnce.onrender.com/api/v8/user/${employee._id}`,
         formData,
         {
           headers: {
