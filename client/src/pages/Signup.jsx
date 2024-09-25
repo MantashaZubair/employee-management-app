@@ -26,7 +26,7 @@ const Signup = () => {
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(form),     
       // }
-      const response= await axios.post(`http://localhost:8082/api/v8/auth/register`, form)
+      const response= await axios.post(`https://employee-management-app-wnce.onrender.com/api/v8/auth/register`, form)
       if(response.status===201){
          handleSuccess(`success: New Account Created`)
          setTimeout(()=>{
