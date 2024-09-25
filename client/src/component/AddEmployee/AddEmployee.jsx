@@ -68,8 +68,8 @@ useEffect(() => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(employee),     
       }
-    const response= updateMode?await fetch(`http://localhost:8082/api/v8/user/${employee._id}`,putOption)
-    :await fetch("http://localhost:8082/api/v8/user",postOption) 
+    const response= updateMode?await fetch(`https://employee-management-app-wnce.onrender.com/api/v8/user/${employee._id}`,putOption)
+    :await fetch("https://employee-management-app-wnce.onrender.com/api/v8/user",postOption) 
       // console.log(response)
       const data= await response.json()
       console.log(data)
