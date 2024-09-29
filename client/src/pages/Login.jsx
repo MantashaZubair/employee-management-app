@@ -73,8 +73,8 @@ const Login = () => {
           <form className='form-container' onSubmit={(e)=>handleSubmit(e)}>
                
                  <h1 className='auth-page'>Login</h1>
-                 <input placeholder="Enter your Username" value={form.username} name="username" onChange={handleChange}/>
-            <input placeholder="Enter your Password" value={form.password} name="password" onChange={handleChange} />
+                 <input placeholder="Enter your Username (admin)" value={form.username} name="username" onChange={handleChange}/>
+            <input placeholder="Enter your Password (admin@1234)" value={form.password} name="password" onChange={handleChange} />
                 <button type='submit' className='btn-auth'>Login</button>
                 <p style={{color:"gray", marginTop:"10px"}}>Don't have an account?<NavLink to={"/signup"} style={{textDecoration:"none" ,color:"#1758f0", marginLeft:"4px", fontSize:"18px"}}>signup</NavLink></p>
                
